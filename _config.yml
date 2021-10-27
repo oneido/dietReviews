@@ -18,18 +18,18 @@ authors:
     name: exercise
     display_name: 멋진 다이어터
     avatar: 'assets/images/avatar-sal.png'
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net/donate/
-    twitter: https://twitter.com/wowthemesnet
-    description: "Author of Memoirs, a Bootstrap Medium styled template available for Jekyll. You are currently previewing Jekyll template demo."
+    # email: wowthemesnet@gmail.com
+    web: https://oneido.github.io/dietReviews
+    # twitter: https://twitter.com/wowthemesnet
+    description: "뿜어져 나오는 건강미는 운동과 함께!"
   food:
     name: food
     display_name: 건강한 다이어터    
     avatar: 'assets/images/avatar.png'
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net
-    twitter: https://twitter.com/wowthemesnet
-    description: "Write a short description of the author here. You are currently previewing Memoirs demo, a Jekyll template compatible with Github pages."
+    # email: wowthemesnet@gmail.com
+    web:https://oneido.github.io/dietReviews
+    # twitter: https://twitter.com/wowthemesnet
+    description: "자기 학대는 좋지 않아요. 나를 사랑하는 법은 건강하게 먹기!"
 
 # Plugins
 plugins:
