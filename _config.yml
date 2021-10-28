@@ -17,7 +17,7 @@ authors:
   exercise:
     name: exercise
     display_name: 멋진 다이어터
-    avatar: 'assets/images/avatar-sal.png'
+    avatar: 'assets/images/exercise-avatar.png'
     # email: wowthemesnet@gmail.com
     web: https://oneido.github.io/dietReviews
     # twitter: https://twitter.com/wowthemesnet
@@ -30,7 +30,30 @@ authors:
     web: https://oneido.github.io/dietReviews
     # twitter: https://twitter.com/wowthemesnet
     description: "자기 학대는 좋지 않아요. 나를 사랑하는 법은 건강하게 먹기!"
-
+  motivation:
+    name: motivation
+    display_name: 도전하는 다이어터
+    avatar: 'assets/images/avatar-sal.png'
+    # email: wowthemesnet@gmail.com
+    web: https://oneido.github.io/dietReviews
+    # twitter: https://twitter.com/wowthemesnet
+    description: "뿜어져 나오는 건강미는 운동과 함께!"
+  fun:
+    name: fun
+    display_name: 즐기는 다이어터
+    avatar: 'assets/images/avatar-sal.png'
+    # email: wowthemesnet@gmail.com
+    web: https://oneido.github.io/dietReviews
+    # twitter: https://twitter.com/wowthemesnet
+    description: "뿜어져 나오는 건강미는 운동과 함께!"
+  story:
+    name: story
+    display_name: 이야기하는 다이어터
+    avatar: 'assets/images/avatar-sal.png'
+    # email: wowthemesnet@gmail.com
+    web: https://oneido.github.io/dietReviews
+    # twitter: https://twitter.com/wowthemesnet
+    description: "뿜어져 나오는 건강미는 운동과 함께!"    
 # Plugins
 plugins:
   - jekyll-paginate
