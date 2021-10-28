@@ -2,8 +2,8 @@
 name: "dietReviews"
 title: "dietReviews"
 description: "건강하고 활기차고 효율적인 다이어트를 위한 모든 것!"
-logo: 'assets/images/logo.png'
-favicon: 'assets/images/logo.png'
+logo: 'assets\images\android-chrome-512x512.png'
+favicon: 'assets\images\android-chrome-512x512.png'
 baseurl: /dietReviews
 # google_analytics: 'UA-xxxxxxxx-1'
 # disqus: 'demowebsite'
