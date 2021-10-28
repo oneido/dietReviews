@@ -3,7 +3,7 @@
 --- 
 
 $brown: #B59F62;
-$teal: #40ffdc00;
+$teal: #40FFDC;
 $black: #111;
 $primary: $teal;
 $dark: $black;
@@ -276,7 +276,7 @@ img:hover {
     align-items: center;
     .author-thumb {
         width: 40px;
-        border-radius: 50%;
+        border-radius: 0%;
         margin-right: 7px;
     }
     .card {
@@ -465,9 +465,9 @@ img:hover {
 .entry-header {
     .author-thumb {
         width: 50px;
-        border-radius: 50%;
+        border-radius: 0%;
         margin-right: 10px;
-        border: 2px solid darken($primary, 20%);
+        // border: 2px solid darken($primary, 20%);
         padding: 2px;
     }
 }
@@ -481,7 +481,7 @@ img:hover {
     .author-thumb {
         width: 70px;
         border-radius: 0%;
-        border: 2px solid darken($primary, 20%);
+        // border: 2px solid darken($primary, 20%);
         padding: 2px;
     }
 }
