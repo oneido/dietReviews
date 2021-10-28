@@ -25,7 +25,7 @@ authors:
   food:
     name: food
     display_name: 건강한 다이어터    
-    avatar: 'assets/images/avatar.png'
+    avatar: 'assets/images/food-avatar.png'
     # email: wowthemesnet@gmail.com
     web: https://oneido.github.io/dietReviews
     # twitter: https://twitter.com/wowthemesnet
