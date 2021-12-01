@@ -8,10 +8,6 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  * @author Lea Verou
  */
 
-.center {
-    text-align: center;
-}
-
 code[class*="language-"],
 pre[class*="language-"] {
     color: black;

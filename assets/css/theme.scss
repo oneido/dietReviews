@@ -1,8 +1,4 @@
---- 
-
---- 
-
-$brown: #B59F62;
+--- --- $brown: #B59F62;
 $teal: #40FFDC;
 $black: #111;
 $primary: $teal;
@@ -35,6 +31,8 @@ a {
 img {
     max-width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
 h1,
