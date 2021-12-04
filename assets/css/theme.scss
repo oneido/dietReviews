@@ -216,7 +216,12 @@ img:hover {
     &.active {
         z-index: 4;
         background: rgba(8, 11, 16, 0.7);
+        background-image: url(https://cdn.pixabay.com/photo/2017/12/17/15/42/christmas-3024428_960_720.jpg);
         animation: animate .3s;
+        animation: animate .3s;
+        background-position-x: right;
+        background-size: contain;
+        background-repeat: no-repeat;
     }
 }
 
