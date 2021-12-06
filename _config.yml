@@ -32,12 +32,12 @@ authors:
     description: "자기 학대는 좋지 않아요. 나를 사랑하는 법은 건강하게 먹기!"
   motivation:
     name: motivation
-    display_name: 도전하는 다이어터
+    display_name: 변화하는 다이어터
     avatar: 'assets/images/motivation-avatar.png'
     # email: wowthemesnet@gmail.com
     web: https://oneido.github.io/dietReviews
     # twitter: https://twitter.com/wowthemesnet
-    description: "뿜어져 나오는 건강미는 운동과 함께!"
+    description: "다양한 이야기를 통해 더 나은 자신으로 변화하세요." 
   fun:
     name: fun
     display_name: 즐기는 다이어터
@@ -45,15 +45,15 @@ authors:
     # email: wowthemesnet@gmail.com
     web: https://oneido.github.io/dietReviews
     # twitter: https://twitter.com/wowthemesnet
-    description: "스트레스 없는 다이어트는 없어요. 우리 지지 말고 웃으며 힘내봐요."
+    description: "스트레스 없는 다이어트는 없어요. 우리 지지 말고 웃으며 힘내요."
   story:
-    name: story
-    display_name: 이야기하는 다이어터
-    avatar: 'assets/images/story-avatar.png'
+    name: idea
+    display_name: 생각하는 다이어터
+    avatar: 'assets\images\idea.svg'
     # email: wowthemesnet@gmail.com
     web: https://oneido.github.io/dietReviews
     # twitter: https://twitter.com/wowthemesnet
-    description: "다른 사람은 어떻게 다이어트를 하나? 참고할 것은 참고하고 배울 것은 배워봐요."
+    description: "다이어트에 관련한 아이디어를 참고하세요."
 # Plugins
 plugins:
   - jekyll-paginate
