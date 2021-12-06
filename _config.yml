@@ -17,7 +17,7 @@ authors:
   exercise:
     name: exercise
     display_name: 멋진 다이어터
-    avatar: 'assets/images/exercise-avatar.png'
+    avatar: 'assets\images\exercise.svg'
     # email: wowthemesnet@gmail.com
     web: https://oneido.github.io/dietReviews
     # twitter: https://twitter.com/wowthemesnet
@@ -25,7 +25,7 @@ authors:
   food:
     name: food
     display_name: 건강한 다이어터    
-    avatar: 'assets/images/food-avatar.png'
+    avatar: 'assets\images\food.svg'
     # email: wowthemesnet@gmail.com
     web: https://oneido.github.io/dietReviews
     # twitter: https://twitter.com/wowthemesnet
@@ -33,7 +33,7 @@ authors:
   motivation:
     name: motivation
     display_name: 변화하는 다이어터
-    avatar: 'assets/images/motivation-avatar.png'
+    avatar: 'assets\images\motivation.svg'
     # email: wowthemesnet@gmail.com
     web: https://oneido.github.io/dietReviews
     # twitter: https://twitter.com/wowthemesnet
@@ -41,7 +41,7 @@ authors:
   fun:
     name: fun
     display_name: 즐기는 다이어터
-    avatar: 'assets/images/fun-avatar.png'
+    avatar: 'assets\images\fun.svg'
     # email: wowthemesnet@gmail.com
     web: https://oneido.github.io/dietReviews
     # twitter: https://twitter.com/wowthemesnet
