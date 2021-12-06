@@ -46,7 +46,7 @@ authors:
     web: https://oneido.github.io/dietReviews
     # twitter: https://twitter.com/wowthemesnet
     description: "스트레스 없는 다이어트는 없어요. 우리 지지 말고 웃으며 힘내요."
-  story:
+  idea:
     name: idea
     display_name: 생각하는 다이어터
     avatar: 'assets\images\idea.svg'
