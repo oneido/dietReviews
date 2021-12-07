@@ -33,7 +33,7 @@ authors:
   motivation:
     name: motivation
     display_name: 변화하는 다이어터
-    avatar: 'assets\images\motivation.svg'
+    avatar: 'assets\images\motivation-avatar.png'
     # email: wowthemesnet@gmail.com
     web: https://oneido.github.io/dietReviews
     # twitter: https://twitter.com/wowthemesnet
