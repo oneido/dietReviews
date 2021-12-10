@@ -27,9 +27,9 @@
     <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 </head>
 
-<!-- {% if jekyll.environment == 'production' %} -->
+{% if jekyll.environment == 'production' %}
 <!-- change your google GA id in _config.yml -->
-<!-- {% endif %} {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %} -->
+{% endif %} {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 
 <body>
     <!-- defer loading of font and font awesome -->
