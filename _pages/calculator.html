@@ -5,31 +5,31 @@ permalink: /calculator
 comments: false
 ---
 
-<div id="wrapper">
+<div id="wrapper" style="display: flex; flex-direction: column;">
   <!--  우선 키, 몸무게, 활동량, 성별 데이터 입력 필드 -->
   <h2>input field</h2>
-  <div class="input field">
+  <div class="input field" style="border: solid; display: grid;grid-template-columns: repeat(4,1fr); text-align: center; grid-gap:1rem; padding:1rem ">
     <label for="height"> 신장</label>
-      <input type="number" name="" id="height" placeholder=" 키 cm 단위로 작성" >
+      <input style="grid-column-end: 4; grid-column-start: 2;"  type="number" name="" id="height" placeholder=" 키 cm 단위로 작성" >
       <span></span>
     <label for="weight">체중</label>
-      <input type="number" name="" id="weight" placeholder=" 체중 kg 단위로 작성" >
+      <input style="grid-column-end: 4; grid-column-start: 2;" type="number" name="" id="weight" placeholder=" 체중 kg 단위로 작성" >
 <span></span>
     <label for=""> 성별</label>
-      <label>남성<input type="radio" name="" id="" class="gender"></label>
-      <label>여성<input type="radio" name="" id="" class="gender"></label>
+      <label>남성<input type="radio" name="" id="" class="gender" style="margin:1rem;"></label>
+      <label>여성<input type="radio" name="" id="" class="gender" style="margin:1rem;"></label>
         <span></span>
       
     <label for=""> 활동량</label>
-      <label>적음<input type="radio" name="" id="" class="activity"></label>
-      <label>보통<input type="radio" name="" id="" class="activity"></label>
-      <label>많음<input type="radio" name="" id="" class="activity"></label>
+      <label>적음<input type="radio" name="" id="" class="activity" style="margin:1rem;"></label>
+      <label>보통<input type="radio" name="" id="" class="activity" style="margin:1rem;"></label>
+      <label>많음<input type="radio" name="" id="" class="activity" style="margin:1rem;"></label>
     
     
   </div>
   <!-- 연산된 데이터가 출력 필드   -->  
     <h2>output field</h2>
-  <div class="output field">
+  <div class="output field" style="border: solid">
     <!-- 하루 필요 열량, 적정 탄수화물 섭취량, 한 끼당 고구마 섭취량 --> 
     <ul>
       <li>하루 필요 열량: <span id="dayCalorie"></span></li>
