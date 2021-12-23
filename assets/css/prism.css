@@ -8,6 +8,33 @@ https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javasc
  * @author Lea Verou
  */
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper>input[type="radio"] {
+    margin: 1rem;
+}
+
+.input.field {
+    border: solid;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+#height #weight {
+    grid-column-end: 4;
+    grid-column-start: 2;
+}
+
+.output.field {
+    border: solid;
+}
+
 .center {
     text-align: center;
 }
