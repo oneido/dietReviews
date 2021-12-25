@@ -9,10 +9,11 @@ comments: false
     <div style="border: red solid ;height:100%;"></div>
 </div> -->
 
-<div id="wrapper" style="height: 200%; padding: 1rem; display: flex; flex-direction: columns; flex-wrap: wrap; margin: auto; ">
+
+<div id="wrapper" style=" height: 200%; width: 420px; display: flex; flex-direction: column; flex-wrap: wrap; margin: auto; ">
 
     <!--  우선 키, 몸무게, 활동량, 성별 데이터 입력 필드 -->
-    <div class="input field" style="flex-basis: 400px; display: grid; grid-template-columns: repeat(5,1fr); text-align: center; grid-gap:1rem; padding:1rem; margin: auto; ">
+    <div class="input field" style=" display: grid; grid-template-columns: repeat(5,1fr); text-align: center; grid-gap:1rem; padding:1rem;  ">
         <label for="height"> 신장</label>
         <input style="grid-column-end: 5; grid-column-start: 2;" type="number" name="" id="height" placeholder=" 키 cm 단위로 작성">
         <span></span>
@@ -34,14 +35,16 @@ comments: false
         <input id="calculator" type="button" value="계산" style="grid-column-start: 2; grid-column-end:5;">
         <span></span>
 
+
+
     </div>
 
     <!-- 연산된 데이터가 출력 필드   -->
-    <div class="output field" style=" height:100%; margin: auto; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-evenly; align-content: space-between;">
+    <div class="output field" style="height: 1700px; width: 420px; margin: auto; display: flex; flex-direction: row; flex-wrap: wrap;  justify-content: space-evenly; align-content:space-between; "> 
         <!-- 하루 필요 열량, 적정 탄수화물 섭취량, 한 끼당 고구마 섭취량 -->
         <!-- <div id="cardBox" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: space-evenly; height: 120%; margin-left:auto; margin-right:auto;"> -->
 
-        <div class="flexItem" style="flex-basis: 300px; display: grid; grid-template-rows: 300px 1fr;  background-color: brown; border: solid; border-radius: 1%; box-shadow: #000 0px 4px 10px; background-image: url(https://cdn.pixabay.com/photo/2020/11/29/07/07/weighing-scale-5786681_960_720.png);background-size: cover; background-repeat: no-repeat;">
+        <div class="flexItem" style="flex-basis: 300px; display: grid; grid-template-rows: 300px 1fr;  background-color: brown; border-radius: 1%; box-shadow: #000 0px 4px 10px; background-image: url(https://cdn.pixabay.com/photo/2020/11/29/07/07/weighing-scale-5786681_960_720.png);background-size: cover; background-repeat: no-repeat;">
             <div style="text-align: center; margin: auto; color:whitesmoke;text-shadow: -1px -1px 0 #000,  
                 1px -1px 0 #000,
                 -1px 1px 0 #000,
@@ -147,120 +150,122 @@ comments: false
 
 
     </div>
-    <script>
-        class calculator {
-            constructor(height, weight, gender, activity) {
-                this.height = height;
-                this.weight = weight;
-                this.gender = gender;
-                this.activity = activity;
+
+</div>
+<script>
+    class calculator {
+        constructor(height, weight, gender, activity) {
+            this.height = height;
+            this.weight = weight;
+            this.gender = gender;
+            this.activity = activity;
+        }
+    }
+
+    class initRadio {
+        constructor(target) {
+            target.addEventListener("click", this.callback.bind(this))
+        }
+
+        callback(e) {
+            switch (e.target.className) {
+                case "gender":
+                    this["genderInit"](e);
+                    break;
+                case "activity":
+                    this["activityInit"](e);
+                    break;
             }
         }
 
-        class initRadio {
-            constructor(target) {
-                target.addEventListener("click", this.callback.bind(this))
-            }
-
-            callback(e) {
-                switch (e.target.className) {
-                    case "gender":
-                        this["genderInit"](e);
-                        break;
-                    case "activity":
-                        this["activityInit"](e);
-                        break;
-                }
-            }
-
-            genderInit(e) {
-                let et = e.target
-                let etc = et.className
-                let etd = et.dataset
-                if (etd.gender == "man") {
-                    document.querySelectorAll(`.${etc}`)[1].checked = false;
-                } else {
-                    document.querySelectorAll(`.${etc}`)[0].checked = false;
-                }
-
-            }
-
-            activityInit(e) {
-                let et = e.target
-                let etc = et.className
-                let etd = et.dataset
-                if (etd.activity == "little") {
-                    document.querySelectorAll(`.${etc}`)[1].checked = false;
-                    document.querySelectorAll(`.${etc}`)[2].checked = false;
-                } else if (etd.activity == "usually") {
-                    document.querySelectorAll(`.${etc}`)[0].checked = false;
-                    document.querySelectorAll(`.${etc}`)[2].checked = false;
-                } else {
-                    document.querySelectorAll(`.${etc}`)[0].checked = false;
-                    document.querySelectorAll(`.${etc}`)[1].checked = false;
-                }
-
-            }
-
-
-        }
-        new initRadio(document.body);
-
-        function createCalData() {
-            console.log(document.querySelectorAll(".gender").length)
-            let height = document.querySelector("#height").value;
-            let weight = document.querySelector("#weight").value;
-            let gender = (function() {
-                if (document.querySelectorAll(".gender")[0].checked == true) {
-                    return 22
-                } else if (document.querySelectorAll(".gender")[1].checked == true) {
-                    return 21
-                } else {
-                    return alert("hey select gender!")
-                }
-            })();
-
-            let activity = (function() {
-                if (document.querySelectorAll(".activity")[0].checked == true) {
-                    return 25
-                } else if (document.querySelectorAll(".activity")[1].checked == true) {
-                    return 30
-                } else if (document.querySelectorAll(".activity")[2].checked == true) {
-                    return 35
-                } else {
-                    return alert("hey select activity")
-                }
-            })();
-
-            let userData = new calculator(height, weight, gender, activity);
-            let regular = (userData.height / 100) ** 2 * userData.gender
-            let minus = weight - regular
-            let dayCalorieData = regular * userData.activity
-            let carbohydrate = ((dayCalorieData - 300) * 0.5) / 4
-            let sweetpotato = carbohydrate / 3 / 0.325
-
-            let minusEle = document.querySelector("#minus")
-            let regularEle = document.querySelector("#regular")
-            let dayCalorieDataEle = document.querySelector("#dayCalorie")
-            let carbohydrateEle = document.querySelector("#carbohydrate")
-            let sweetpotatoEle = document.querySelector("#sweetpotato")
-
-            regularEle.textContent = `현재 신장을 기준으로한 표준 체중은 ${Math.floor(regular)}킬로그램 입니다.`
-
-            if (minus < 0) {
-                minusEle.textContent = `감량할 체중이 없습니다. 지방을 줄이고 근육량을 늘려주세요.`
-            } else if (minus = 0) {
-                minusEle.textContent = `현재 체중이 표준 체중입니다.`
+        genderInit(e) {
+            let et = e.target
+            let etc = et.className
+            let etd = et.dataset
+            if (etd.gender == "man") {
+                document.querySelectorAll(`.${etc}`)[1].checked = false;
             } else {
-                minusEle.textContent = `현재 체중에서 ${Math.floor(minus)}킬로그램 감량이 필요합니다.`
+                document.querySelectorAll(`.${etc}`)[0].checked = false;
             }
-
-            dayCalorieDataEle.textContent = `표준 체중을 기준으로 하루 적정 칼로리 섭취량은 ${Math.floor(dayCalorieData)} 칼로리 입니다.`;
-            carbohydrateEle.textContent = `하루 적정 칼로리 섭취량을 기준으로한 하루 적정 탄수화물 섭취량은  ${Math.floor(carbohydrate)}그램 입니다.`;
-            sweetpotatoEle.textContent = `하루 적정 탄수화물 섭취량을 기준으로한 한 끼당 고구마 섭취량은 ${Math.floor(sweetpotato)}그램 입니다.`;
 
         }
 
-        document.querySelector("#calculator").addEventListener("click", createCalData);
-        // 신장, 체중, 성별, 활동량 데이터
-    </script>
+        activityInit(e) {
+            let et = e.target
+            let etc = et.className
+            let etd = et.dataset
+            if (etd.activity == "little") {
+                document.querySelectorAll(`.${etc}`)[1].checked = false;
+                document.querySelectorAll(`.${etc}`)[2].checked = false;
+            } else if (etd.activity == "usually") {
+                document.querySelectorAll(`.${etc}`)[0].checked = false;
+                document.querySelectorAll(`.${etc}`)[2].checked = false;
+            } else {
+                document.querySelectorAll(`.${etc}`)[0].checked = false;
+                document.querySelectorAll(`.${etc}`)[1].checked = false;
+            }
+
+        }
+
+
+    }
+    new initRadio(document.body);
+
+    function createCalData() {
+        console.log(document.querySelectorAll(".gender").length)
+        let height = document.querySelector("#height").value;
+        let weight = document.querySelector("#weight").value;
+        let gender = (function() {
+            if (document.querySelectorAll(".gender")[0].checked == true) {
+                return 22
+            } else if (document.querySelectorAll(".gender")[1].checked == true) {
+                return 21
+            } else {
+                return alert("hey select gender!")
+            }
+        })();
+
+        let activity = (function() {
+            if (document.querySelectorAll(".activity")[0].checked == true) {
+                return 25
+            } else if (document.querySelectorAll(".activity")[1].checked == true) {
+                return 30
+            } else if (document.querySelectorAll(".activity")[2].checked == true) {
+                return 35
+            } else {
+                return alert("hey select activity")
+            }
+        })();
+
+        let userData = new calculator(height, weight, gender, activity);
+        let regular = (userData.height / 100) ** 2 * userData.gender
+        let minus = weight - regular
+        let dayCalorieData = regular * userData.activity
+        let carbohydrate = ((dayCalorieData - 300) * 0.5) / 4
+        let sweetpotato = carbohydrate / 3 / 0.325
+
+        let minusEle = document.querySelector("#minus")
+        let regularEle = document.querySelector("#regular")
+        let dayCalorieDataEle = document.querySelector("#dayCalorie")
+        let carbohydrateEle = document.querySelector("#carbohydrate")
+        let sweetpotatoEle = document.querySelector("#sweetpotato")
+
+        regularEle.textContent = `현재 신장을 기준으로한 표준 체중은 ${Math.floor(regular)}킬로그램 입니다.`
+
+        if (minus < 0) {
+            minusEle.textContent = `감량할 체중이 없습니다. 지방을 줄이고 근육량을 늘려주세요.`
+        } else if (minus = 0) {
+            minusEle.textContent = `현재 체중이 표준 체중입니다.`
+        } else {
+            minusEle.textContent = `현재 체중에서 ${Math.floor(minus)}킬로그램 감량이 필요합니다.`
+        }
+
+        dayCalorieDataEle.textContent = `표준 체중을 기준으로 하루 적정 칼로리 섭취량은 ${Math.floor(dayCalorieData)} 칼로리 입니다.`;
+        carbohydrateEle.textContent = `하루 적정 칼로리 섭취량을 기준으로한 하루 적정 탄수화물 섭취량은  ${Math.floor(carbohydrate)}그램 입니다.`;
+        sweetpotatoEle.textContent = `하루 적정 탄수화물 섭취량을 기준으로한 한 끼당 고구마 섭취량은 ${Math.floor(sweetpotato)}그램 입니다.`;
+
+    }
+
+    document.querySelector("#calculator").addEventListener("click", createCalData);
+    // 신장, 체중, 성별, 활동량 데이터
+</script>
