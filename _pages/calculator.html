@@ -5,7 +5,7 @@ permalink: /calculator
 comments: false 
 ---
 
-<div id="wrapper" style="display: flex; flex-direction: column;">
+<div id="wrapper" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: space-evenly; height: 100vh; ">
     <!--  우선 키, 몸무게, 활동량, 성별 데이터 입력 필드 -->
     <div class="input field" style="border: solid; display: grid;grid-template-columns: repeat(4,1fr); text-align: center; grid-gap:1rem; padding:1rem ">
         <label for="height"> 신장</label>
@@ -31,36 +31,89 @@ comments: false
     </div>
     <!-- 연산된 데이터가 출력 필드   -->
 
-    <div class="output field" style="padding: 1rem;">
+    <div class="output field">
         <!-- 하루 필요 열량, 적정 탄수화물 섭취량, 한 끼당 고구마 섭취량 -->
-        <table class="calTable" border="1" style="margin-left:auto; margin-right:auto;">
+        <div id="cardBox" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: space-evenly; height: 120%; padding: 1rem; margin-left:auto; margin-right:auto;">
 
+            <div class="flexItem" style="display: grid; grid-template-rows: 3fr 0.5fr; height:19%; background-color: yellowgreen;border: solid;background-color: brown; border: solid; background-image: url(https://cdn.pixabay.com/photo/2020/11/29/07/07/weighing-scale-5786681_960_720.png);background-size: cover; background-repeat: no-repeat;">
+                <div style="text-align: center;">
+                    <h3>표준체중</h3>
+                    <p>입력된 키의 적정 체중을 말합니다.</p>
+                </div>
+                <div style="background-color: aliceblue; text-align: center;">
+                    <span id="regular">결과</span>
+                </div>
+            </div>
+
+            <div class="flexItem" style="display: grid; grid-template-rows: 3fr 0.5fr; height:19%; background-color: yellow; border: solid;background-color: brown; border: solid; background-image: url(https://cdn.pixabay.com/photo/2014/07/22/09/59/bread-399286_960_720.jpg);background-size: cover; background-repeat: no-repeat;">
+                <div style="text-align: center;">
+                    <h3>감량체중</h3>
+                    <p>현재 체중과 표준 체중의 차이를 말합니다.</p>
+                </div>
+                <div style="background-color: aliceblue; text-align: center;">
+                    <span id="minus">결과</span>
+                </div>
+            </div>
+            <div class="flexItem" style="display: grid; grid-template-rows: 3fr 0.5fr; height:19%; background-color: orangered; border: solid;background-color: brown; border: solid; background-image: url(https://cdn.pixabay.com/photo/2014/07/22/09/59/bread-399286_960_720.jpg);background-size: cover; background-repeat: no-repeat;">
+                <div style="text-align: center;">
+                    <h3>하루열량</h3>
+                    <p>표준 체중의 사람이 먹어야 하는 칼로리입니다.</p>
+                </div>
+                <div style="background-color: aliceblue; text-align: center;">
+                    <span id="dayCalorie">결과</span>
+                </div>
+            </div>
+            <div class="flexItem" style="display: grid; grid-template-rows: 3fr 0.5fr; height:19%; background-color: brown; border: solid; background-image: url(https://cdn.pixabay.com/photo/2014/07/22/09/59/bread-399286_960_720.jpg);background-size: cover; background-repeat: no-repeat;">
+                <div style="text-align: center;">
+                    <h3>하루 탄수화물 섭취량</h3>
+                    <p>하루동안 섭취해야 하는 탄수화물의 양을 말합니다.</p>
+                </div>
+                <div style="background-color: aliceblue; text-align: center;">
+                    <span id="carbohydrate">결과</span>
+                </div>
+            </div>
+            <div class="flexItem" style="display: grid; grid-template-rows: 3fr 0.5fr; height:19%; background-color: rebeccapurple; border: solid;background-color: brown; border: solid; background-image: url(https://cdn.pixabay.com/photo/2014/07/22/09/59/bread-399286_960_720.jpg);background-size: cover; background-repeat: no-repeat;">
+                <div style="text-align: center;">
+                    <h3>한 끼 고구마 적정 섭취량</h3>
+                    <p>고구마로 한 끼 식사의 탄수화물을 대체할 경우의 섭취량입니다.</p>
+                </div>
+                <div style="background-color: aliceblue; text-align: center;">
+                    <span id="sweetpotato">결과</span>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <!-- <table class="calTable" border="1" style="margin-left:auto; margin-right:auto;">
+            
             <tr>
-                <th>표준체중</th>
-                <td><span id="regular">입력된 키의 적정 체중을 말합니다.</span></td>
+              <th>표준체중</th>
+              <td><span id="regular">입력된 키의 적정 체중을 말합니다.</span></td>
             </tr>
-
+            
             <tr>
-                <th>감량체중</th>
-                <td><span id="minus">현재 체중과 표준 체중의 차이를 말합니다.</span></td>
+              <th>감량체중</th>
+              <td><span id="minus">현재 체중과 표준 체중의 차이를 말합니다.</span></td>
             </tr>
-
+            
             <tr>
-                <th>하루열량</th>
-                <td><span id="dayCalorie">표준 체중의 사람이 먹어야 하는 칼로리입니다.</span></td>
+              <th>하루열량</th>
+              <td><span id="dayCalorie">표준 체중의 사람이 먹어야 하는 칼로리입니다.</span></td>
             </tr>
-
+            
             <tr>
-                <th>하루 탄수화물 섭취량</th>
-                <td><span id="carbohydrate">하루동안 섭취해야 하는 탄수화물의 양을 말합니다.</span></td>
+              <th>하루 탄수화물 섭취량</th>
+              <td><span id="carbohydrate">하루동안 섭취해야 하는 탄수화물의 양을 말합니다.</span></td>
             </tr>
-
+            
             <tr>
-                <th>한 끼 고구마 적정 섭취량</th>
-                <td><span id="sweetpotato">고구마로 한 끼 식사의 탄수화물을 대체할 경우의 섭취량입니다.</span></td>
+              <th>한 끼 고구마 적정 섭취량</th>
+              <td><span id="sweetpotato">고구마로 한 끼 식사의 탄수화물을 대체할 경우의 섭취량입니다.</span></td>
             </tr>
-        </table>
-
+          </table>
+           -->
 
         <!--     <ul>
   <li>표준 체중: <span id="regular"></span></li>
