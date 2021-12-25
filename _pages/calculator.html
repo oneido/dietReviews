@@ -21,15 +21,15 @@ comments: false
         <input style="grid-column-end: 5; grid-column-start: 2;" type="number" name="" id="weight" placeholder=" 체중 kg 단위로 작성">
         <span></span>
         <label for=""> 성별</label>
-        <span>남성<input type="radio" name="" id="man" class="gender" data-gender="man"></span>
-        <span>여성<input type="radio" name="" id="woman" class="gender" data-gender="woman"></span>
+        <label>남성<input type="radio" name="" id="man" class="gender" data-gender="man"></label>
+        <label>여성<input type="radio" name="" id="woman" class="gender" data-gender="woman"></label>
         <span></span>
         <span></span>
 
         <label for=""> 활동량</label>
-        <span>적음<input type="radio" name="" id="" class="activity" data-activity="little"></span>
-        <span>보통<input type="radio" name="" id="" class="activity" data-activity="usually"></span>
-        <span>많음<input type="radio" name="" id="" class="activity" data-activity="lot"></span>
+        <label>적음<input type="radio" name="" id="" class="activity" data-activity="little"></label>
+        <label>보통<input type="radio" name="" id="" class="activity" data-activity="usually"></label>
+        <label>많음<input type="radio" name="" id="" class="activity" data-activity="lot"></label>
 
         <span></span>
         <input id="calculator" type="button" value="계산" style="grid-column-start: 2; grid-column-end:5;">
@@ -45,20 +45,22 @@ comments: false
     <!-- 하루 필요 열량, 적정 탄수화물 섭취량, 한 끼당 고구마 섭취량 -->
     <!-- <div id="cardBox" style="display: flex; flex-direction: column; flex-wrap: wrap; justify-content: space-evenly; height: 120%; margin-left:auto; margin-right:auto;"> -->
 
-    <div class="flexItem" style="margin-bottom:2rem; flex-basis: 300px; display: grid; grid-template-rows: 300px 1fr;  background-color: brown; border-radius: 1%; box-shadow: #000 0px 4px 10px; background-image: url(https://cdn.pixabay.com/photo/2020/11/29/07/07/weighing-scale-5786681_960_720.png);background-size: cover; background-repeat: no-repeat;">
+    <div class="flexItem" style="margin-bottom:2rem; flex-basis: 300px; display: grid; grid-template-rows: 300px 1fr;  background-color: brown; border-radius: 1%; box-shadow: #000 0px 4px 10px; background-image: url(https://c.tenor.com/w2SsPYjSTlwAAAAi/rascal-diet.gif);background-size: contain; background-repeat: no-repeat;">
         <div style="text-align: center; margin: auto; color:whitesmoke;text-shadow: -1px -1px 0 #000,  
                 1px -1px 0 #000,
                 -1px 1px 0 #000,
-                 1px 1px 0 #000;">
+                 1px 1px 0 #000;
+                 ">
+        
             <h2>표준체중</h2>
             <p>입력된 키의 적정 체중을 말합니다.</p>
         </div>
-        <div id="regular" style="background-color: aliceblue; text-align: center;">
+        <div style="background-color: aliceblue; text-align: center;">
             <p><span id="regular">결과</span></p>
         </div>
     </div>
 
-    <div class="flexItem" style="margin-bottom:2rem;flex-basis: 300px; display: grid; grid-template-rows: 300px 1fr; background-color: yellow; background-color: brown;  border-radius: 1%; box-shadow: #000 0px 4px 10px; background-image: url(https://cdn.pixabay.com/photo/2015/01/30/18/13/diet-617756_960_720.jpg);background-size: cover; background-repeat: no-repeat;">
+    <div class="flexItem" style="margin-bottom:2rem;flex-basis: 300px; display: grid; grid-template-rows: 300px 1fr; background-color: yellow; background-color: brown;  border-radius: 1%; box-shadow: #000 0px 4px 10px; background-image: url(https://c.tenor.com/Mjp1sXnXi9gAAAAC/kakao-arachi.gif);background-size: contain; background-repeat: no-repeat;">
         <div style="text-align: center; margin: auto; color:whitesmoke;text-shadow: -1px -1px 0 #000,  
                 1px -1px 0 #000,
                 -1px 1px 0 #000,
@@ -70,7 +72,7 @@ comments: false
             <p><span id="minus">결과</span></p>
         </div>
     </div>
-    <div class="flexItem" style="margin-bottom:2rem; flex-basis: 300px; display: grid; grid-template-rows: 300px 1fr;  background-color: orangered; background-color: brown; border-radius: 1%; box-shadow: #000 0px 4px 10px;  background-image: url(https://cdn.pixabay.com/photo/2014/07/22/09/59/bread-399286_960_720.jpg);background-size: cover; background-repeat: no-repeat;">
+    <div class="flexItem" style="margin-bottom:2rem; flex-basis: 300px; display: grid; grid-template-rows: 300px 1fr;  background-color: orangered; background-color: brown; border-radius: 1%; box-shadow: #000 0px 4px 10px;  background-image: url(https://c.tenor.com/XpFCi7Fr0scAAAAC/peachcat-cute.gif);background-size: contain; background-repeat: no-repeat;">
         <div style="text-align: center; margin: auto; color:whitesmoke;text-shadow: -1px -1px 0 #000,  
                 1px -1px 0 #000,
                 -1px 1px 0 #000,
@@ -82,7 +84,7 @@ comments: false
             <p><span id="dayCalorie">결과</span></p>
         </div>
     </div>
-    <div class="flexItem" style="margin-bottom:2rem; flex-basis: 300px; display: grid; grid-template-rows: 300px 1fr;  background-color: brown;border-radius: 1%; box-shadow: #000 0px 4px 10px; background-image: url(https://cdn.pixabay.com/photo/2014/07/22/09/59/bread-399286_960_720.jpg);background-size: cover; background-repeat: no-repeat;">
+    <div class="flexItem" style="margin-bottom:2rem; flex-basis: 300px; display: grid; grid-template-rows: 300px 1fr;  background-color: brown;border-radius: 1%; box-shadow: #000 0px 4px 10px; background-image: url(https://c.tenor.com/2spKYfvTJ6AAAAAi/cuisine-food.gif);background-size: contain; background-repeat: no-repeat;">
         <div style="text-align: center; margin: auto; color:whitesmoke;text-shadow: -1px -1px 0 #000,  
                 1px -1px 0 #000,
                 -1px 1px 0 #000,
@@ -94,7 +96,7 @@ comments: false
             <p><span id="carbohydrate">결과</span></p>
         </div>
     </div>
-    <div class="flexItem" style="margin-bottom:2rem; flex-basis: 300px; display: grid; grid-template-rows: 300px 1fr;  background-color: rebeccapurple; background-color: brown; border-radius: 1%; box-shadow: #000 0px 4px 10px; background-image: url(https://cdn.pixabay.com/photo/2014/07/22/09/59/bread-399286_960_720.jpg);background-size: cover; background-repeat: no-repeat;">
+    <div class="flexItem" style="margin-bottom:2rem; flex-basis: 300px; display: grid; grid-template-rows: 300px 1fr;  background-color: rebeccapurple; background-color: brown; border-radius: 1%; box-shadow: #000 0px 4px 10px; background-image: url(https://cdn.pixabay.com/photo/2021/10/13/10/41/tubers-6706153_960_720.png);background-size: contain; background-repeat: no-repeat;">
         <div style="text-align: center; margin: auto; color:whitesmoke; text-shadow: -1px -1px 0 #000,  
                 1px -1px 0 #000,
                 -1px 1px 0 #000,
