@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color-bg-start {
+            background-color: salmon;
+        }
+        /* toggle class bg-animate-color */
+        
+        .bg-animate-color {
+            animation: random-bg .5s linear infinite;
+        }
+        /* add animation to bg color  */
+        
+        @keyframes random-bg {
+            from {
+                filter: hue-rotate(0);
+            }
+            to {
+                filter: hue-rotate(360deg);
+            }
+        }
+        
+        .fun-btn {
+            /* change bg color to get different hues    */
+            background-color: salmon;
+            color: bisque;
+            padding: 2rem 3rem;
+            border: none;
+            transition: all .3s ease;
+            border-radius: 0px 0px 5px 5px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            outline: none;
+            align-self: center;
+            cursor: pointer;
+            font-weight: bold;
+            animation: random-bg 1s linear infinite;
+            text-align: center;
+        }
+        /* .fun-btn:hover {
+            animation: random-bg 1s linear infinite;
+        } */
+        
+        .start-fun {
+            background-color: #fff !important;
+            /* change color of button text when fun is started   */
+            color: salmon !important;
+        }
+        /* pulsating effect on button */
+        
+        @keyframes grow {
+            0% {
+                transform: scale(1);
+            }
+            14% {
+                transform: scale(1.3);
+            }
+            28% {
+                transform: scale(1);
+            }
+            42% {
+                transform: scale(1.3);
+            }
+            70% {
+                transform: scale(1);
+            }
+        }
+        
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+            font-size: 1rem;
+            padding: 0;
+            margin: 0;
+        }
+        /* *{
+            border: solid red;
+        } */
+    </style>
+</head>
+
+<body style="width: 100%; height: 100%; margin: auto; background-color: bisque;overflow-x: hidden;">
+
+    <div id="flexBox" style="
+    display:flex; 
+    flex-direction: row;  
+    -webkit-flex-direction: row;  
+    flex-wrap: wrap; 
+    -webkit-flex-wrap: wrap; 
+    justify-content: space-evenly; 
+    padding: 1rem;">
+
+        <!-- 타이틀 영역-->
+        <div class="flexitem">
+            <!-- 타이틀 이미지 -->
+            <!-- <img src="img\title.jpg" style="width: 100%; height: 100%; object-fit: contain;" alt=""> -->
+        </div>
+
+        <!-- 메인 영역 -->
+        <div class="flexitem">
+            <!-- 메인 이미지 -->
+            <img src="img\opem.jpg" style="width: 100%; height: 100%; object-fit: contain;" alt="">
+        </div>
+
+        <!-- 동영상 영역 -->
+        <div class="flexitem" style="position: relative; width: 100%; height: auto; padding-top: 50%">
+            <iframe width="100%" height="auto" src="https://www.youtube.com/embed/WI7pBCBYTV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; "></iframe>
+        </div>
+
+        <!-- 상품 영역 -->
+        <div class="flexitem" style=" display: grid; grid-template-rows: repeat(2,1fr); grid-gap: 1rem; gap: 1rem; padding-bottom: 1rem; width: 100%;">
+            <!-- 상품 목록-->
+            <div style="margin: auto;">
+                <!-- 상품 이미지 -->
+                <img src="img\lig.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- 문자버튼 -->
+                <div class="fun-btn">
+                    <a style="display: none;" href="sms:01082771426?body=🎐신년💥최.대.할.인💥 🎊이벤트🎊 🎀베라핏 라이트🎀 참여합니다">이벤트 참여 문자보내기</a>
+                    <a style="display: none;" href="sms:01082771426&body=🎐신년💥최.대.할.인💥 🎊이벤트🎊 🎀베라핏 라이트🎀 참여합니다">이벤트 참여 문자보내기</a>
+                </div>
+            </div>
+            <!-- 상품 목록-->
+            <div style="margin: auto;">
+                <!-- 상품 이미지 -->
+                <img src="img\prp.jpg" alt="" style="width: 100%; height: 100%; object-fit: cover;">
+                <!-- 문자버튼 -->
+                <div class="fun-btn">
+                    <a style="display: none;" href="sms:01082771426?body=🎐신년💥최.대.할.인💥 🎊이벤트🎊 🎀베라핏 프로🎀 참여합니다">이벤트 참여 문자보내기</a>
+                    <a style="display: none;" href="sms:01082771426&body=🎐신년💥최.대.할.인💥 🎊이벤트🎊 🎀베라핏 프로🎀 참여합니다">이벤트 참여 문자보내기</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 이벤트 참고 -->
+        <p><b>본 이벤트는 <u>100인 한정</u>으로 발송된 <u>이벤트</u>입니다. 참여도와 관계없이 <mark class="fun-btn" style="padding: 0; border-radius: 0;">금일 오후 6시에 종료</mark>됩니다.</b></p>
+
+    </div>
+
+    <script>
+        (function checkOS() {
+
+            let dataOS = navigator.userAgent.toLowerCase(); //userAgent 값 얻기
+
+            if (dataOS.indexOf('android') > -1) {
+                //안드로이드
+                document.querySelectorAll("a")[0].style.display = "block";
+                document.querySelectorAll("a")[2].style.display = "block";
+                return "android";
+            } else if (dataOS.indexOf("iphone") > -1 || dataOS.indexOf("ipad") > -1 || dataOS.indexOf("ipod") > -1) {
+                //IOS
+                document.querySelectorAll("a")[1].style.display = "block";
+                document.querySelectorAll("a")[3].style.display = "block";
+                return "ios";
+            } else {
+                //아이폰, 안드로이드 외
+                return "other";
+            }
+        })();
+    </script>
+</body>
+
+</html>
