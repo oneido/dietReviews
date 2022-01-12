@@ -4,7 +4,7 @@ title: "dietReviews"
 description: "건강하고 활기차고 효율적인 다이어트를 위한 모든 것!"
 logo: 'assets\images\android-chrome-512x512.png'
 favicon: 'assets\images\android-chrome-512x512.png'
-baseurl: /dietReviews
+# baseurl:
 # google_analytics: "G-P4PN9F3D1X"
 # disqus: 'demowebsite'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
